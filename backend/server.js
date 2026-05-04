@@ -14,11 +14,11 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("Expense Manager API Running");
+  res.send("Library API Running");
 });
 
 app.use("/api/auth", require("./routes/authRoutes"));
-app.use("/api/expense", require("./routes/expenseRoutes"));
+app.use("/api/books", require("./routes/bookRoutes"));
 
 const PORT = process.env.PORT || 5000;
 
